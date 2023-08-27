@@ -14,7 +14,7 @@ public class LoginPageTest {
     @Steps
     LoginPageSteps loginPageSteps;
 
-    @Managed(driver = "chrome")
+    @Managed(driver = "firefox")
     WebDriver browser;
 
     @Test
