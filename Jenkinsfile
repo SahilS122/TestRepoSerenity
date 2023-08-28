@@ -1,13 +1,16 @@
 pipeline {
     agent any
-
+    parameters{
+        string name: "application"
+    }
     stages {
         stage('Show Inputs') {
             steps {
                 echo "Browser: ${browser}"
                 echo "Environment: ${environment}"
+                echo "Application: ${application}"
             }
-            }
+        }
         stage('Test') {
             steps {
                 bat "gradle clean test"
