@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-    stage('Show Inputs') {
-                steps {
-                    echo "Browser:" ${browser}
-    				echo "Environment:" ${environment}
-                }
+        stage('Show Inputs') {
+            steps {
+                echo "Browser: ${browser}"
+                echo "Environment: ${environment}"
+            }
         stage('Test') {
             steps {
                 bat "gradle clean test"
