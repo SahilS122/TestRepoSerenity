@@ -2,15 +2,16 @@ pipeline {
     agent any
 
     stages {
+    stage('Show Inputs') {
+                steps {
+                    echo "Browser:" ${browser}
+    				echo "Environment:" ${environment}
+                }
         stage('Test') {
             steps {
                 bat "gradle clean test"
             }
-			stage('Show Inputs') {
-            steps {
-                echo "Browser:" ${browser}
-				echo "Environment:" ${environment}
-            }
+
 
             post {
                 // If Gradle was able to run the tests, even if some of the test
