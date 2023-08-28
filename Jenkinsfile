@@ -10,7 +10,7 @@ pipeline {
             }
         stage('Test') {
             steps {
-                bat "gradle clean test"
+                bat "gradle clean test -Dbrowser= ${browser}"
             }
 
 
