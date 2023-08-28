@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "gradle clean test -Pwebdriver.driver=${browser}"
+                bat "gradle clean test -Dwebdriver.driver=${browser}"
             }
 
 
