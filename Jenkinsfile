@@ -5,7 +5,6 @@ pipeline {
             steps {
                 echo "Browser: ${browser}"
                 echo "Environment: ${environment}"
-                echo "Application: ${application}"
             }
         }
         stage('Test') {
