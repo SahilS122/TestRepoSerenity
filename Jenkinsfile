@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    parameters{
-        string name: "application"
-    }
     stages {
         stage('Show Inputs') {
             steps {
