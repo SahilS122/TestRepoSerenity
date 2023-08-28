@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    parameters{
+        string(name: "environment" defaultValue: "uat")
+        choice(name: "browser", choices: ["one", "two", "three"], description: "")
+    }
     stages {
         stage('Show Inputs') {
             steps {
