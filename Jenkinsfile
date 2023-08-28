@@ -7,6 +7,7 @@ pipeline {
                 echo "Browser: ${browser}"
                 echo "Environment: ${environment}"
             }
+            }
         stage('Test') {
             steps {
                 bat "gradle clean test"
